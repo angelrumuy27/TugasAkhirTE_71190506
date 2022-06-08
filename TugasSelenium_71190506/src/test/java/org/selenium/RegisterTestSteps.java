@@ -46,8 +46,6 @@ public class RegisterTestSteps {
 //                By.xpath("//*[contains(text()," + "create"+")]"));
 //        Assertions.
         String expectedUrl = "https://demo.guru99.com/insurance/v1/register.php";
-        WebDriver driver = new ChromeDriver();
-        driver.get(expectedUrl);
         Assert.assertEquals(expectedUrl, driver.getCurrentUrl());
 
     }
