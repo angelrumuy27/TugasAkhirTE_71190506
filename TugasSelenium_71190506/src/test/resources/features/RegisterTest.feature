@@ -1,13 +1,24 @@
 Feature: Test register functionality on register page
 
-  Scenario: Username dan password harus diisi
+  Scenario Outline: Register ke aplikasi web
 
     Given pengguna membuka browser
 
-    And user berada di halaman register
+    And pengguna ada di halaman register
 
-    When username atau password kosong
+    When pengguna memasukan "<password>" password "<confirmpassword>" confirmpassword dan "<username>" username
 
-    And user klik tombol create
+    And pengguna klik tombol create
 
-    Then user tetap berada dihalaman register
+    Then pengguna berada dihalaman login
+
+
+    Examples:
+      | password       | confirmpassword | username        |
+      |                |                 |                 |
+      | 12345678       | 12345678        |                 |
+      |                |                 | angel@gmail.com |
+      | 123456         | 1234567         | angel@gmail.com |
+      | 12345678901234 | 12345678901234  | angel@gmail.com |
+#      valid test case
+      | 12345678       | 12345678        | angel@gmail.com |
