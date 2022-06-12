@@ -51,7 +51,8 @@ public class RegisterTestSteps {
 
     @Then("pengguna berada dihalaman login")
     public void pengguna_berada_dihalaman_login(){
-        if(usernameuser.length() != 0 && passwordUser.length() !=0 && passwordUser.length() >= 8 && passwordUser.length()<=13){
+        if(usernameuser.length() != 0 && passwordUser.length() !=0 && passwordUser.length() >= 8 && passwordUser.length()<=13 &&
+        passwordUser.matches("[A-Za-z0-9]+") && usernameuser.contains("@")){
             String expectedUrl = "https://demo.guru99.com/insurance/v1/index.php";
             Assert.assertEquals(expectedUrl, driver.getCurrentUrl());
         }else{

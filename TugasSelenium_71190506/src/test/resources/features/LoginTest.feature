@@ -14,9 +14,10 @@ Feature: Test Login functionality on login page
 
 
     Examples:
-      | password       | username        |
-      |                |                 |
-      |                | angel@gmail.com |
-#       sesuai
-      | 15678       |                 |
-      | 12345678       | angel@gmail.com |
+      | password  | username        |
+      |           |                 |
+      |           | angel@gmail.com |
+      | 12345^&*= | angel@gmail.com |
+#       test case yg hasilnya sesuai requirement
+      | 15678     |                 |
+      | 12345678  | angel@gmail.com |

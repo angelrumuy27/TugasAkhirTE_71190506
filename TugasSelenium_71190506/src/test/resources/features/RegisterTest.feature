@@ -20,5 +20,6 @@ Feature: Test register functionality on register page
       |                |                 | angel@gmail.com |
       | 123456         | 1234567         | angel@gmail.com |
       | 12345678901234 | 12345678901234  | angel@gmail.com |
-#      valid test case
+#       test case yg hasilnya sesuai requirement
+      | 12345678       | 12345678        | angel.gmail.com |
       | 12345678       | 12345678        | angel@gmail.com |
